@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.home');
-});
+Route::get('/',[AdminController::class, 'home']);
 
 Route::get('/lokasi', [AdminController::class, 'index']);
 

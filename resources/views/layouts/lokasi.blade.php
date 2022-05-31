@@ -5,10 +5,6 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">DataTable with default features</h3>
-            </div>
-            <!-- /.card-header -->
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -19,13 +15,18 @@
                 </tr>
                 </thead>
                 <tbody>
+                {{ $no = 0; }}
+                @foreach ($data_lokasi as $lokasi)
+                {{ $no++ }}
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
+                    <td>{{ $no }}</td>
+                    <td>{{ $lokasi->nama }}</td>
+                    <td>
+                        <a href="/lokasi/ubah" class="btn btn-warning">Ubah</a>
+                        <a href="/lokasi/hapus" class="btn btn-danger">Hapus</a>
+                    </td>
                 </tr>
+                @endforeach
                 </tbody>
                 <tfoot>
                 <tr>
