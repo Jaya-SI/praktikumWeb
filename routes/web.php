@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LokasiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[AdminController::class, 'home']);
 
 Route::get('/lokasi', [AdminController::class, 'index']);
-
+Route::get('lokasi/tambah', [LokasiController::class, 'index']);
+Route::post('lokasi/create',[LokasiController::class, 'create']);
 

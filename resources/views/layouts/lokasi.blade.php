@@ -40,6 +40,9 @@
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
+          <div class="container mb-3 d-flex justify-content-end">
+            <a href="/lokasi/tambah" class="btn btn-primary">Tambah Data</a>
+          </div>
         </div>
         <!-- /.col -->
       </div>
