@@ -10,7 +10,7 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="/lokasi/{{ $lokasi->id }}/create" method="POST">
+                    <form action="/lokasi/{{ $lokasi->id }}/update" method="POST">
                     @csrf
                       <div class="card-body">
                         <div class="form-group">
