@@ -70,7 +70,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
-                <a href="/" class="nav-link">
+                <a href="/" class="nav-link {{ $title == "Home" ? 'active' : '' }}">
                   <i class="nav-icon fas fa-home"></i>
                   <p>
                     Home
@@ -78,8 +78,8 @@
                 </a>
               </li>
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
               <p>
                 Data
                 <i class="right fas fa-angle-left"></i>
@@ -87,15 +87,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/lokasi" class="nav-link active">
+                <a href="/lokasi" class="nav-link {{ $title == "Lokasi" ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lokasi</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="/jabatan" class="nav-link {{ $title == "Jabatan" ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
+                  <p>Jabatan</p>
                 </a>
               </li>
               <li class="nav-item">

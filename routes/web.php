@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\LokasiController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,10 @@ Route::get('lokasi/{id}/ubah',[LokasiController::class,'ubah']);
 Route::post('lokasi/{id}/update',[LokasiController::class,'edit']);
 Route::get('lokasi/{id}/hapus',[LokasiController::class, 'delete']);
 Route::get('lokasi/print',[LokasiController::class,'print']);
+
+//jabatan
+Route::get('/jabatan', [AdminController::class, 'jabatan']);
+Route::get('/jabatan/tambah', [JabatanController::class, 'index']);
+Route::post('/jabatan/create', [JabatanController::class, 'create']);
+Route::get('/jabatan/{id}/hapus', [JabatanController::class, 'delete']);
 

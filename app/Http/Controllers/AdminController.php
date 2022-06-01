@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jabatan;
 use App\Models\Lokasi;
 use Illuminate\Http\Request;
 
@@ -21,6 +22,17 @@ class AdminController extends Controller
             "title" => "Lokasi",
             'data_lokasi' => $data_lokasi,
             "no" => $no,
+        ]);
+    }
+
+    public function jabatan()
+    {
+        $no = 1;
+        $data_jabatan = Jabatan::all();
+        return view('jabatan.jabatan',[
+            "title" => "Jabatan",
+            'data_jabatan' => $data_jabatan,
+            "no" => $no
         ]);
     }
 }
