@@ -43,4 +43,15 @@ class LokasiController extends Controller
         $lokasi->delete();
         return redirect('/lokasi');
     }
+
+    public function print()
+    {
+        $no = 1;
+        $data_lokasi = Lokasi::all();
+        return view('lokasi.print',[
+            "title" => "Lokasi",
+            'data_lokasi' => $data_lokasi,
+            "no" => $no,
+        ]);
+    }
 }

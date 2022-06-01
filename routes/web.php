@@ -23,4 +23,5 @@ Route::post('lokasi/create',[LokasiController::class, 'create']);
 Route::get('lokasi/{id}/ubah',[LokasiController::class,'ubah']);
 Route::post('lokasi/{id}/update',[LokasiController::class,'edit']);
 Route::get('lokasi/{id}/hapus',[LokasiController::class, 'delete']);
+Route::get('lokasi/print',[LokasiController::class,'print']);
 

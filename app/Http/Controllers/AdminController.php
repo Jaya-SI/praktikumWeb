@@ -15,7 +15,12 @@ class AdminController extends Controller
     }
     public function index()
     {
+        $no = 1;
         $data_lokasi = Lokasi::all();
-        return view('layouts.lokasi',["title" => "Lokasi",'data_lokasi' => $data_lokasi]);
+        return view('layouts.lokasi',[
+            "title" => "Lokasi",
+            'data_lokasi' => $data_lokasi,
+            "no" => $no,
+        ]);
     }
 }
