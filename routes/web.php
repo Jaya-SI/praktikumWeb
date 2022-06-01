@@ -31,4 +31,6 @@ Route::get('/jabatan', [AdminController::class, 'jabatan']);
 Route::get('/jabatan/tambah', [JabatanController::class, 'index']);
 Route::post('/jabatan/create', [JabatanController::class, 'create']);
 Route::get('/jabatan/{id}/hapus', [JabatanController::class, 'delete']);
+Route::get('/jabatan/{id}/ubah', [JabatanController::class,'ubah']);
+route::post('/jabatan/{id}/update',[JabatanController::class,'update']);
 

@@ -4,12 +4,8 @@
     <div class="container-fluid">
       <div class="container mb-3 d-flex justify-content-end">
         <div class="row">
-          <div class="col">
-            <a href="/lokasi/tambah" class="btn btn-primary">Tambah</a>
-          </div>
-          <div class="col">
+            <a href="/lokasi/tambah" class="btn btn-primary mr-1">Tambah</a>
             <a href="/lokasi/print" class="btn btn-info">Print</a>
-          </div>
         </div>
       </div>
       <div class="row">

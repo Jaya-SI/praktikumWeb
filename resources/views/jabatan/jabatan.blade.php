@@ -5,7 +5,7 @@
       <div class="container mb-3 d-flex justify-content-end">
         <div class="row">
             <a href="/jabatan/tambah" class="btn btn-primary mr-1">Tambah</a>
-            <a href="/lokasi/print" class="btn btn-info">Print</a>
+            <a href="/jabatan/print" class="btn btn-info">Print</a>
         </div>
       </div>
       <div class="row">

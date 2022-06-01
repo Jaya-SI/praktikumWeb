@@ -26,4 +26,19 @@ class JabatanController extends Controller
         $jabatan->delete();
         return redirect('/jabatan');
     }
+
+    public function ubah($id)
+    {
+        $jabatan = Jabatan::find($id);
+        return view('jabatan.ubah',[
+            "title" => "Ubah Data Jabatan",
+            'jabatan' => $jabatan,
+        ]);
+    }
+    public function update(Request $request, $id)
+    {
+        $jabatan = Jabatan::find($id);
+        $jabatan->update($request->all());
+        return redirect('/jabatan');
+    }
 }
