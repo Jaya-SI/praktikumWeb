@@ -22,8 +22,8 @@
                     <td>{{ $no }}</td>
                     <td>{{ $lokasi->nama }}</td>
                     <td>
-                        <a href="/lokasi/ubah" class="btn btn-warning">Ubah</a>
-                        <a href="/lokasi/hapus" class="btn btn-danger">Hapus</a>
+                        <a href="/lokasi/{{ $lokasi->id }}/ubah" class="btn btn-warning">Ubah</a>
+                        <a href="/lokasi/{{ $lokasi->id }}/hapus" class="btn btn-danger">Hapus</a>
                     </td>
                 </tr>
                 @endforeach

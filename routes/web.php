@@ -20,4 +20,7 @@ Route::get('/',[AdminController::class, 'home']);
 Route::get('/lokasi', [AdminController::class, 'index']);
 Route::get('lokasi/tambah', [LokasiController::class, 'index']);
 Route::post('lokasi/create',[LokasiController::class, 'create']);
+Route::get('lokasi/{id}/ubah',[LokasiController::class,'ubah']);
+Route::post('lokasi/{id}/create',[LokasiController::class,'create']);
+Route::get('lokasi/{id}/hapus',[LokasiController::class, 'delete']);
 

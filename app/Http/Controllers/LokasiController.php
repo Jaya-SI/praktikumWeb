@@ -20,4 +20,27 @@ class LokasiController extends Controller
         Lokasi::create($request->all());
         return redirect('/lokasi');
     }
+
+    public function ubah($id)
+    {   
+        $lokasi = Lokasi::find($id);
+        return view('lokasi.ubah',[
+            "title" => "Ubah Lokasi",
+            'lokasi' => $lokasi,
+        ]);
+    }
+
+    public function edit(Request $request, $id)
+    {
+        $lokasi = Lokasi::find($id);
+        $lokasi->update($request->all());
+        return redirect('/lokasi');
+    }
+
+    public function delete($id)
+    {
+        $lokasi = Lokasi::find($id);
+        $lokasi->delete();
+        return redirect('/lokasi');
+    }
 }
