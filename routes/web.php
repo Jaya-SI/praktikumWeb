@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\LokasiController;
+use App\Http\Controllers\PenggajianController;
+use App\Models\Penggajian;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,4 +38,7 @@ route::post('/jabatan/{id}/update',[JabatanController::class,'update']);
 
 //Penggajian
 Route::get('/penggajian', [AdminController::class, 'penggajian']);
+Route::get('/penggajian/tambah',[PenggajianController::class, 'index']);
+Route::post('/penggajian/create',[PenggajianController::class, 'create']);
+Route::get('/penggajian/print',[PenggajianController::class,'print']);
 
