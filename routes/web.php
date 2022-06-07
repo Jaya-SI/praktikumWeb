@@ -34,3 +34,6 @@ Route::get('/jabatan/{id}/hapus', [JabatanController::class, 'delete']);
 Route::get('/jabatan/{id}/ubah', [JabatanController::class,'ubah']);
 route::post('/jabatan/{id}/update',[JabatanController::class,'update']);
 
+//Penggajian
+Route::get('/penggajian', [AdminController::class, 'penggajian']);
+
